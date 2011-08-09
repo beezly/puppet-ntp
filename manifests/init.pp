@@ -20,7 +20,7 @@ class ntp {
 	# RedHat uses "ntpd", whereas "ntp" works for nearly everything else
 	
 	serviceName => $operatingsystem ? {
-		RedHat => "ntpd",
+		/(RedHat|CentOS|Fedora)/ => "ntpd",
 		default => "ntp"
 	}
 
